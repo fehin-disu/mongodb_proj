@@ -1,9 +1,9 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Fozs_Okj)
 # CMPUT 291 Mini Project 2 - Winter 2024  
 Group member names and ccids (3-4 members)  
-  ccid1, name1  
-  ccid2, name2  
-  ccid3, name2  
+  elykah, Elykah Tejol  
+  adhikar2, Sandhya Adhikari  
+  fehintol, Fehintola Disu  
 
 # Group work break-down strategy
 Please add group work break-down strategy.
