@@ -1,3 +1,7 @@
+# The json files
+messages.json
+senders.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
