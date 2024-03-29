@@ -10,8 +10,9 @@ Group member names and ccids (3-4 members)
 - Elykah worked on Task 1, step 1 (2 hours) 
 - Sandhya worked on Task 1, step 2 (2 hours) 
 - Fehintola worked on Task 1, step 3 (2 hours)
-- Sandhya worked on Task 1, step 4 (3 hours)
-- Elykah worked on Task 1, step 4 (2 hours) 
+- Sandhya, Elykah, and Fehintola worked on Task 1, step 4 (3 hours)
+- Elykah worked on error handling for step 4 (1 1/2 hr)
+- Sandhya worked on Task 2, step 1 (2 hours)
   
 # Code execution guide
 Please add code execution guide. Make sure to include all details.
