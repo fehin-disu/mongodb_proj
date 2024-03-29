@@ -29,7 +29,7 @@ def task1_build():
 
     # Open messages.json and store its data, read line by line to account for memory
     msg_data = [] 
-    with open('messages.json', 'r') as file:
+    with open('messages.json', 'r',encoding='utf-8') as file:
         for line in file: 
             if '[' in line or ']' in line:
                 pass # do nothing
@@ -60,7 +60,7 @@ def task1_build():
     senders = db["senders"] # creating the collection 
 
     # Please account for memory handling here 
-    with open('senders.json', 'r') as file: 
+    with open('senders.json', 'r',encoding = 'utf-8') as file: 
         sender_data = json.load(file)
 
 
