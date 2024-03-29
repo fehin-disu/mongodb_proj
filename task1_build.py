@@ -4,7 +4,7 @@ import json
 import time 
 
 
-def task1(): 
+def task1_build(): 
 
     # -------- Step 1 start -------- 
 
@@ -25,6 +25,8 @@ def task1():
         msg = db["messages"]
         msg.drop() # drop messages if it exists 
 
+    messages = db["messages"] # create the collection
+
     # Open messages.json and store its data, read line by line to account for memory
     msg_data = [] 
     with open('messages.json', 'r') as file:
@@ -34,9 +36,6 @@ def task1():
             else: 
                 line = line.rstrip(',\n')
                 msg_data.append(json.loads(line.strip())) # Adding the data in 
-
-    # Create collection messages
-    messages = db["messages"]
 
     # Define batch size
     batch_size = 5000
@@ -58,19 +57,20 @@ def task1():
         senders = db["senders"]
         senders.drop() # drop senders if exists
 
+    senders = db["senders"] # creating the collection 
+
     # Please account for memory handling here 
     with open('senders.json', 'r') as file: 
         sender_data = json.load(file)
 
-    senders = db["senders"] # creating the collection 
 
     senders.insert_many(sender_data) # Can insert into db in one batch
 
     end_time2 = time.time() # end timer for senders
 
-    print(f"Time taken for step 2 : {(end_time2 - start_time2) * 1000} ms")
+    print(f"\nTime taken for step 2 : {(end_time2 - start_time2) * 1000} ms")
 
+    return db
 
-task1() 
 
       
