@@ -54,7 +54,7 @@ def task1_query(db):
         {"$count": "count"}
     ]
     try:
-        result = list(messages.aggregate(pipeline3, maxTimeMS=120000)) # pls change
+        result = list(messages.aggregate(pipeline3, maxTimeMS=120000))
         end_time = time.time()
         print(f"Number of messages where sender's credit is 0: {result[0]['count']}")
         print(f"Time taken before indexing: {(end_time - start_time) * 1000} ms")
