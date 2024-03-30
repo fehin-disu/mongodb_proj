@@ -38,7 +38,7 @@ def task1_query(db):
         result = list(messages.aggregate(pipeline, maxTimeMS=120000))
         end_time = time.time()
         print(f"Sender with the most messages: {result[0]['sender']} ({result[0]['count']} messages)")
-        print(f"Time taken after indexing: {(end_time - start_time) * 1000} ms")
+        print(f"Time taken before indexing: {(end_time - start_time) * 1000} ms")
     except pymongo.errors.ExecutionTimeout:
         print("Query 2 takes more than two minutes.")
 
@@ -113,7 +113,7 @@ def task1_query(db):
         result = list(messages.aggregate(pipeline, maxTimeMS=120000))
         end_time = time.time()
         print(f"Sender with the most messages: {result[0]['sender']} ({result[0]['count']} messages)")
-        print(f"Time taken AFTER indexing: {(end_time - start_time) * 1000} ms")
+        print(f"Time taken after indexing: {(end_time - start_time) * 1000} ms")
     except pymongo.errors.ExecutionTimeout:
         print("Query 2 (after indexing) takes more than two minutes.")
 
