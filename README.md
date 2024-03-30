@@ -6,6 +6,7 @@ Group member names and ccids (3-4 members)
   fehintol, Fehintola Disu  
 
 # Group work break-down strategy
+Note: We worked on the tasks through Discord/in-person together. 
 
 - Elykah worked on Task 1, step 1 (2 hours) 
 - Sandhya worked on Task 1, step 2 (2 hours) 
