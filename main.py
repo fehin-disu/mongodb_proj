@@ -6,8 +6,10 @@ from task2_query import task2_query
 import json 
 import time 
 def main(): 
-    # db = task1_build()
-    # task1_query(db)
+    print("Task 1")
+    db = task1_build()
+    task1_query(db)
+    print("Task 2")
     dbEmb = task2_build()
     task2_query(dbEmb)
 main()
