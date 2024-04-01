@@ -38,6 +38,7 @@ For task1:
   
 - Fehintola used Claude.ai to aid in understanding how indices work in MongoDB
 Prompt Question: how do i create indices for fields "sender" and "text" in messages collection. 
+
 Output:
 To create indices for the fields "sender" and "text" in the messages collection, you can use the following code:
 ```python
