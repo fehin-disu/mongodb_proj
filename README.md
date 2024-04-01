@@ -21,19 +21,22 @@ Note: We worked on the tasks through Discord/in-person together.
   
 # Code execution guide
 Prerequisites before running the code: MongoDB server must be running and you know the port number
+
 For task1:
-  Run the python file named task1.py
-  It will ask for the post number, please provide your MongoDB server’s port number
-  Task 1 is now running
+- Run the python file named task1.py
+- It will ask for the post number, please provide your MongoDB server’s port number
+- Task 1 is now running
+  
 For task1:
-  Run the python file named task2.py
-  It will ask for the post number, please provide your MongoDB server’s port number
-  Task 2 is now running
+- Run the python file named task2.py
+- It will ask for the post number, please provide your MongoDB server’s port number
+- Task 2 is now running
 
 
 # AI Agents
-Sandhya did not use AI for this assignment.
-Fehintola used Claude.ai to aid in understanding how indices work in MongoDB
+- Sandhya did not use AI for this assignment.
+  
+- Fehintola used Claude.ai to aid in understanding how indices work in MongoDB
 Prompt Question: how do i create indices for fields "sender" and "text" in messages collection. 
 Output:
 To create indices for the fields "sender" and "text" in the messages collection, you can use the following code:
@@ -45,6 +48,45 @@ messages.create_index("sender")
 messages.create_index([("text", "text")])
 
 ```
+
+- Elykah used ChatGPT to ask about json loading & insertMany
+Prompt Question: Data should be inserted in small batches (say 5k-10k messages per batch) using insertMany command in MongoDB. 
+
+What does this mean? I thought insertMany just inserted all here
+
+Here's my code
+
+    # -- Insert data from "messages,.json" to messages collection 
+    with open('messages.json') as file:
+        file_data = json.load(file)
+
+    msg_col = db["messages"] # Create collection messages
+    msg_col.insert_many(file_data) # add the values in 
+      
+but file_data contains ALL the data from json right? but we are just slowly inserting it to the database
+
+Output: Yes, you are correct. In your current implementation, insert_many() inserts all the data from the JSON file into the MongoDB collection at once. However, the statement you mentioned about inserting data in small batches using insert_many refers to breaking up the data into smaller subsets and inserting them sequentially.
+
+Here's how you can modify your code to insert data in batches:
+```
+import json
+
+# Define the batch size
+batch_size = 5000
+
+# Open the JSON file
+with open('messages.json') as file:
+    file_data = json.load(file)
+
+# Create collection messages
+msg_col = db["messages"]
+
+# Split the data into batches
+for i in range(0, len(file_data), batch_size):
+    batch = file_data[i:i+batch_size]
+    msg_col.insert_many(batch)
+```
+
 # Collaborations
 Names of anyone you have collaborated with (as much as it is allowed within the course policy) or a line saying that you did not collaborate with anyone else.  
 We did not collaborate with anyone else. 
