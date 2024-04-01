@@ -51,6 +51,7 @@ messages.create_index([("text", "text")])
 ```
 
 - Elykah used ChatGPT to ask about json loading & insertMany
+  
 Prompt Question: Data should be inserted in small batches (say 5k-10k messages per batch) using insertMany command in MongoDB. 
 
 What does this mean? I thought insertMany just inserted all here
