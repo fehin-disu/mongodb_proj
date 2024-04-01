@@ -17,18 +17,22 @@ Note: We worked on the tasks through Discord/in-person together.
 - Sandhya worked on Task 2, step 2 (2 hours)
 - Elykah worked on main.py and reviewed the files (2 hours)
 - Elykah worked on starting report.pdf (1/2 hour)
+
   
 # Code execution guide
 Prerequisites before running the code: MongoDB server must be running and you know the port number
-1. Run main.py
-2. Provide port number for server
-3. Task 1 is now running
-4. After task 2, you are asked for the port number again. Please provide the port number for the server.
-5. Task 2 is now running. 
+For task1:
+  Run the python file named task1.py
+  It will ask for the post number, please provide your MongoDB server’s port number
+  Task 1 is now running
+For task1:
+  Run the python file named task2.py
+  It will ask for the post number, please provide your MongoDB server’s port number
+  Task 2 is now running
+
 
 # AI Agents
-If you have used AI agents (such as ChatGPT), you must clearly explain how you havve used it and what were your prompt and model's answer. 
-
+Sandhya did not use AI for this assignment.
 
 # Collaborations
 Names of anyone you have collaborated with (as much as it is allowed within the course policy) or a line saying that you did not collaborate with anyone else.  
