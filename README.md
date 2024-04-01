@@ -18,6 +18,8 @@ Note: We worked on the tasks through Discord/in-person together.
 - Elykah worked on main.py and reviewed the files (2 hours)
 - Elykah worked on starting report.pdf (1/2 hour)
 - Sandhya worked on making two different main functions for task1 and task 2 and updating the report for that part(1 1/2 hour)
+- Fehintola and Elykah reviewed the requirements as well as worked on the report.pdf (2 hours)
+  
   
 # Code execution guide
 Prerequisites before running the code: MongoDB server must be running and you know the port number
