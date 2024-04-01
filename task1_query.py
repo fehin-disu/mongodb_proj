@@ -20,7 +20,7 @@ def task1_query(db):
         print(f"Time taken before indexing: {(end_time - start_time) * 1000} ms")
 
     except pymongo.errors.ExecutionTimeout as e: # Catch max time error
-        print("Query 1 takes more than two minutes.")
+        print("Query 1 takes more than two minutes before indexing.")
     
 
     # ---------- Query 2, no indexing
@@ -40,7 +40,7 @@ def task1_query(db):
         print(f"Sender with the most messages: {result[0]['sender']} ({result[0]['count']} messages)")
         print(f"Time taken before indexing: {(end_time - start_time) * 1000} ms")
     except pymongo.errors.ExecutionTimeout:
-        print("Query 2 takes more than two minutes.")
+        print("Query 2 takes more than two minutes before indexing.")
 
 
 
@@ -59,7 +59,7 @@ def task1_query(db):
         print(f"Number of messages where sender's credit is 0: {result[0]['count']}")
         print(f"Time taken before indexing: {(end_time - start_time) * 1000} ms")
     except pymongo.errors.ExecutionTimeout:
-        print("Query 3 takes more than two minutes.")
+        print("Query 3 takes more than two minutes before indexing.")
 
     # ---------- Query 4, no indexing    
     try: 
@@ -70,7 +70,7 @@ def task1_query(db):
         print("Credits doubled for senders with credit less than 100.")
         print(f"Time taken: {(end_time - start_time) * 1000} ms")
     except pymongo.errors.ExecutionTimeout:
-        print("Query 4 takes more than two minutes.")
+        print("Query 4 takes more than two minutes before indexing.")
 
     #---------- REPEAT QUERIES 1 TO 3 WITH INDEXING
         
@@ -132,3 +132,4 @@ def task1_query(db):
 
     except pymongo.errors.ExecutionTimeout:
         print("Query 3 (after indexing) takes more than two minutes.")
+    

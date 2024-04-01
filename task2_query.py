@@ -13,7 +13,7 @@ def task2_query(db):
         count = messages.count_documents({"text": {"$regex": "ant"}}, maxTimeMS=120000) # accounting for maxTime
         end_time = time.time()
         print(f"Number of messages with 'ant' in text: {count}")
-        print(f"Time taken for query 1: {(end_time - start_time) * 1000} ms")
+        print(f"Time taken for query 1 after embed: {(end_time - start_time) * 1000} ms")
 
     except pymongo.errors.ExecutionTimeout as e: # Catch max time error
         print("Query 1 takes more than two minutes.")
@@ -34,7 +34,7 @@ def task2_query(db):
         end_time = time.time()
         for sender in result:
             print(f"The sender with the most messages is {sender['_id']} with {sender['count']} messages.")
-        print(f"Time taken after embed: {(end_time - start_time) * 1000} ms")
+        print(f"Time taken for query 2 after embed: {(end_time - start_time) * 1000} ms")
     except pymongo.errors.ExecutionTimeout:
         print("Query 2 takes more than two minutes.")
 
@@ -63,6 +63,6 @@ def task2_query(db):
         messages.update_many({'sender_info.credit': {'$lt': 100}},{'$mul': {'sender_info.credit': 2}})
         end_time = time.time()
         print("Credits doubled for senders with credit less than 100.")
-        print(f"Time taken: {(end_time - start_time) * 1000} ms")
+        print(f"Time taken for query 4 with embed: {(end_time - start_time) * 1000} ms")
     except pymongo.errors.ExecutionTimeout:
         print("Query 4 takes more than two minutes.")

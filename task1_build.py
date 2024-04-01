@@ -47,7 +47,7 @@ def task1_build():
 
     end_time=time.time() # done for step 1 
 
-    print(f"Time taken for step 1 : {(end_time - start_time) * 1000} ms")
+    print(f"Time taken for step 1(building messages.db) : {(end_time - start_time) * 1000} ms")
     # -------- Step 2 start -------- 
 
     start_time2 = time.time() # start timer for senders
@@ -68,7 +68,7 @@ def task1_build():
 
     end_time2 = time.time() # end timer for senders
 
-    print(f"\nTime taken for step 2 : {(end_time2 - start_time2) * 1000} ms")
+    print(f"\nTime taken for step 2 (Building senders.db): {(end_time2 - start_time2) * 1000} ms")
 
     return db
 
