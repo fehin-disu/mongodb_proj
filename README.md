@@ -1,9 +1,8 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Fozs_Okj)
 # CMPUT 291 Mini Project 2 - Winter 2024  
-Group member names and ccids (3-4 members)  
-  elykah, Elykah Tejol  
-  adhikar2, Sandhya Adhikari  
-  fehintol, Fehintola Disu  
+Group member names:  
+  Elykah Tejol  
+  Sandhya Adhikari  
+  Fehintola Disu  
 
 # Group work break-down strategy
 Note: We worked on the tasks through Discord/in-person together. 
@@ -91,6 +90,4 @@ for i in range(0, len(file_data), batch_size):
     msg_col.insert_many(batch)
 ```
 
-# Collaborations
-Names of anyone you have collaborated with (as much as it is allowed within the course policy) or a line saying that you did not collaborate with anyone else.  
-We did not collaborate with anyone else. 
+
